@@ -17,6 +17,8 @@
 		<maven-compiler-pluging.version>3.2</maven-compiler-pluging.version>
 		<spring-framework.version>4.3.0.RELEASE</spring-framework.version>
 		<servlet.version>3.1.0</servlet.version>
+		<thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
+		<hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
 	</properties>
 	
 	<build>
@@ -49,6 +51,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+			<scope>compile</scope>
 		</dependency>
 		
 		<!-- Servlet API --> 
@@ -58,6 +61,27 @@
 			<version>${servlet.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf</artifactId>
+			<version>${thymeleaf.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring4</artifactId>
+			<version>${thymeleaf.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+            <scope>compile</scope>
+        </dependency>
 	</dependencies>
 	
 </project>
